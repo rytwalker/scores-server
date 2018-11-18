@@ -3,14 +3,14 @@ exports.up = function(knex, Promise) {
     // primary key
     table.increments('id');
     // foreign key for quizzes
-    tbl
+    table
       .integer('quiz_id')
       .unsigned()
       .references('id')
       .inTable('quizzes');
 
     // foreign key for teams
-    tbl
+    table
       .integer('team_id')
       .unsigned()
       .references('id')
@@ -33,6 +33,8 @@ exports.up = function(knex, Promise) {
     table.integer('r7_points_scored').notNullable();
     // R8 points
     table.integer('r8_points_scored').notNullable();
+    // R8 points
+    table.string('round_jokered', 255).notNullable();
   });
 };
 
