@@ -1,25 +1,10 @@
 const express = require('express');
+const teamsRoute = require('./routes/api/teamsRoute');
 
-const db = require('./data/models/Team');
 const server = express();
 
-server.get('/', async (req, res) => {
-  try {
-    const teams = await db.get();
-
-    teams.forEach(team => {
-      team.averagePercentCorrect = parseFloat(
-        ((team.points / team.total) * 100).toFixed(2)
-      );
-      delete team.total;
-      delete team.points;
-    });
-
-    res.status(200).json(teams);
-  } catch (errors) {
-    res.status(500).json({ errors: 'There was an error.' });
-  }
-});
+server.use(express.json());
+server.use('/api/teams', teamsRoute);
 
 const port = process.env.PORT || 5000;
 
