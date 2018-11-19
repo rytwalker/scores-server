@@ -2,7 +2,7 @@ const db = require('../dbConfig');
 
 module.exports = {
   // GET TEAMS or SINGLE TEAM
-  get: function(id) {
+  get: async function(id) {
     let query = db
       .select('t.name as teamName')
       .sum('s.total_points_scored as points')
@@ -16,9 +16,23 @@ module.exports = {
       .join('quizzes as q', 's.quiz_id', 'q.id');
 
     if (id) {
-      return query.where({ 't.id': id }).first();
-    } else {
-      return query;
+      query.where({ 't.id': id });
     }
+
+    try {
+      query = await query;
+    } catch (error) {
+      console.log({ error: 'There was an error accessing the DB.' });
+    }
+
+    query.forEach(team => {
+      team.averagePercentCorrect = parseFloat(
+        ((team.points / team.total) * 100).toFixed(2)
+      );
+      delete team.total;
+      delete team.points;
+    });
+
+    return query;
   }
 };
