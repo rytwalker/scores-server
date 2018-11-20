@@ -4,7 +4,7 @@ module.exports = {
   // GET TEAMS or SINGLE TEAM
   get: async function(id) {
     let query = db
-      .select('t.name as teamName')
+      .select('t.name as teamName', 't.id as id')
       .sum('s.total_points_scored as points')
       .sum('q.total_points as total')
       .avg('s.total_points_scored as averageScore ')
