@@ -1,7 +1,17 @@
 const db = require('../dbConfig');
 
 module.exports = {
-  // GET TEAMS or SINGLE TEAM
+  getAll: async function() {
+    try {
+      const quizzes = await db
+        .select('q.id', 'q.date', 'q.total_points')
+        .from('quizzes as q');
+      return quizzes;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  // GET SINGLE TEAM
   get: async function(id) {
     try {
       let row = await db

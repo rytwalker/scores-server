@@ -6,7 +6,7 @@ const router = express.Router();
 // GET TEAMS FOR LEADERBOARD
 router.get('/', async (req, res) => {
   try {
-    const quizzes = await db.get();
+    const quizzes = await db.getAll();
     res.status(200).json(quizzes);
   } catch (errors) {
     res.status(500).json({ errors: 'There was an error get the teams.' });
