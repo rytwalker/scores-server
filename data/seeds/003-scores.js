@@ -8,6 +8,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 1,
+          rank: 1,
           total_points_scored: 75,
           r1_points_scored: 7,
           r2_points_scored: 12,
@@ -22,6 +23,8 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 2,
           team_id: 1,
+          rank: 1,
+
           total_points_scored: 65,
           r1_points_scored: 7,
           r2_points_scored: 9,
@@ -36,6 +39,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 3,
           team_id: 1,
+          rank: 1,
           total_points_scored: 71,
           r1_points_scored: 6,
           r2_points_scored: 13,
@@ -50,6 +54,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 4,
           team_id: 1,
+          rank: 1,
           total_points_scored: 79,
           r1_points_scored: 8,
           r2_points_scored: 8,
@@ -64,6 +69,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 2,
+          rank: 9,
           total_points_scored: 74,
           r1_points_scored: 7,
           r2_points_scored: 11,
@@ -78,6 +84,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 2,
           team_id: 2,
+          rank: 1,
           total_points_scored: 71,
           r1_points_scored: 8,
           r2_points_scored: 11,
@@ -92,6 +99,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 3,
           team_id: 2,
+          rank: 1,
           total_points_scored: 54,
           r1_points_scored: 6,
           r2_points_scored: 10,
@@ -106,6 +114,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 4,
           team_id: 2,
+          rank: 1,
           total_points_scored: 74,
           r1_points_scored: 5,
           r2_points_scored: 13,
@@ -120,6 +129,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 3,
+          rank: 16,
           total_points_scored: 53,
           r1_points_scored: 8,
           r2_points_scored: 10,
@@ -134,6 +144,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 2,
           team_id: 3,
+          rank: 1,
           total_points_scored: 69,
           r1_points_scored: 7,
           r2_points_scored: 13,
@@ -148,6 +159,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 3,
           team_id: 3,
+          rank: 1,
           total_points_scored: 52,
           r1_points_scored: 6,
           r2_points_scored: 8,
@@ -162,6 +174,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 4,
           team_id: 3,
+          rank: 1,
           total_points_scored: 75,
           r1_points_scored: 7,
           r2_points_scored: 14,
@@ -176,6 +189,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 4,
+          rank: 15,
           total_points_scored: 60,
           r1_points_scored: 6,
           r2_points_scored: 8,
@@ -190,6 +204,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 2,
           team_id: 4,
+          rank: 1,
           total_points_scored: 53,
           r1_points_scored: 4,
           r2_points_scored: 5,
@@ -204,6 +219,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 5,
+          rank: 1,
           total_points_scored: 75,
           r1_points_scored: 7,
           r2_points_scored: 11,
@@ -218,6 +234,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 3,
           team_id: 5,
+          rank: 1,
           total_points_scored: 71,
           r1_points_scored: 8,
           r2_points_scored: 16,
@@ -232,6 +249,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 4,
           team_id: 5,
+          rank: 1,
           total_points_scored: 55,
           r1_points_scored: 5,
           r2_points_scored: 6,
@@ -246,6 +264,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 6,
+          rank: 4,
           total_points_scored: 70,
           r1_points_scored: 2,
           r2_points_scored: 14,
@@ -260,6 +279,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 2,
           team_id: 6,
+          rank: 1,
           total_points_scored: 75,
           r1_points_scored: 7,
           r2_points_scored: 14,
@@ -274,6 +294,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 3,
           team_id: 6,
+          rank: 1,
           total_points_scored: 71,
           r1_points_scored: 6,
           r2_points_scored: 14,
@@ -288,6 +309,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 4,
           team_id: 6,
+          rank: 1,
           total_points_scored: 78,
           r1_points_scored: 8,
           r2_points_scored: 14,
@@ -302,6 +324,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 7,
+          rank: 1,
           total_points_scored: 75,
           r1_points_scored: 7,
           r2_points_scored: 14,
@@ -316,6 +339,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 2,
           team_id: 7,
+          rank: 1,
           total_points_scored: 68,
           r1_points_scored: 8,
           r2_points_scored: 12,
@@ -330,6 +354,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 8,
+          rank: 22,
           total_points_scored: 43,
           r1_points_scored: 6,
           r2_points_scored: 12,
@@ -344,6 +369,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 9,
+          rank: 1,
           total_points_scored: 75,
           r1_points_scored: 7,
           r2_points_scored: 14,
@@ -358,6 +384,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 3,
           team_id: 9,
+          rank: 1,
           total_points_scored: 69,
           r1_points_scored: 7,
           r2_points_scored: 13,
@@ -372,6 +399,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 10,
+          rank: 1,
           total_points_scored: 75,
           r1_points_scored: 7,
           r2_points_scored: 14,
@@ -386,6 +414,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 2,
           team_id: 10,
+          rank: 1,
           total_points_scored: 75,
           r1_points_scored: 7,
           r2_points_scored: 14,
@@ -400,6 +429,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 3,
           team_id: 10,
+          rank: 1,
           total_points_scored: 75,
           r1_points_scored: 7,
           r2_points_scored: 14,
@@ -414,6 +444,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 4,
           team_id: 10,
+          rank: 1,
           total_points_scored: 75,
           r1_points_scored: 7,
           r2_points_scored: 14,
@@ -428,6 +459,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 11,
+          rank: 17,
           total_points_scored: 48,
           r1_points_scored: 6,
           r2_points_scored: 9,
@@ -442,6 +474,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 12,
+          rank: 1,
           total_points_scored: 75,
           r1_points_scored: 7,
           r2_points_scored: 14,
@@ -456,6 +489,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 2,
           team_id: 12,
+          rank: 1,
           total_points_scored: 67,
           r1_points_scored: 7,
           r2_points_scored: 13,
@@ -470,6 +504,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 3,
           team_id: 12,
+          rank: 1,
           total_points_scored: 63,
           r1_points_scored: 5,
           r2_points_scored: 11,
@@ -484,6 +519,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 3,
           team_id: 13,
+          rank: 1,
           total_points_scored: 42,
           r1_points_scored: 2,
           r2_points_scored: 8,
@@ -498,6 +534,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 4,
           team_id: 14,
+          rank: 1,
           total_points_scored: 53,
           r1_points_scored: 8,
           r2_points_scored: 10,
@@ -512,6 +549,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 3,
           team_id: 15,
+          rank: 1,
           total_points_scored: 45,
           r1_points_scored: 5,
           r2_points_scored: 5,
@@ -526,6 +564,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 4,
           team_id: 15,
+          rank: 1,
           total_points_scored: 54,
           r1_points_scored: 6,
           r2_points_scored: 6,
@@ -540,6 +579,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 16,
+          rank: 1,
           total_points_scored: 73,
           r1_points_scored: 6,
           r2_points_scored: 14,
@@ -554,6 +594,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 4,
           team_id: 16,
+          rank: 1,
           total_points_scored: 62,
           r1_points_scored: 3,
           r2_points_scored: 14,
@@ -568,6 +609,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 17,
+          rank: 1,
           total_points_scored: 75,
           r1_points_scored: 7,
           r2_points_scored: 14,
@@ -580,22 +622,9 @@ exports.seed = function(knex, Promise) {
           round_jokered: 'R2'
         },
         {
-          quiz_id: 1,
-          team_id: 17,
-          total_points_scored: 70,
-          r1_points_scored: 2,
-          r2_points_scored: 14,
-          r3_points_scored: 6,
-          r4_points_scored: 7,
-          r5_points_scored: 8,
-          r6_points_scored: 4,
-          r7_points_scored: 7,
-          r8_points_scored: 8,
-          round_jokered: 'R2'
-        },
-        {
           quiz_id: 2,
           team_id: 17,
+          rank: 1,
           total_points_scored: 72,
           r1_points_scored: 6,
           r2_points_scored: 14,
@@ -610,6 +639,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 3,
           team_id: 17,
+          rank: 1,
           total_points_scored: 65,
           r1_points_scored: 7,
           r2_points_scored: 14,
@@ -624,6 +654,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 4,
           team_id: 18,
+          rank: 1,
           total_points_scored: 66,
           r1_points_scored: 1,
           r2_points_scored: 14,
@@ -638,6 +669,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 19,
+          rank: 1,
           total_points_scored: 68,
           r1_points_scored: 8,
           r2_points_scored: 12,
@@ -652,6 +684,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 20,
+          rank: 1,
           total_points_scored: 74,
           r1_points_scored: 6,
           r2_points_scored: 14,
@@ -666,6 +699,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 2,
           team_id: 20,
+          rank: 1,
           total_points_scored: 51,
           r1_points_scored: 7,
           r2_points_scored: 7,
@@ -680,6 +714,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 3,
           team_id: 21,
+          rank: 1,
           total_points_scored: 27,
           r1_points_scored: 3,
           r2_points_scored: 3,
@@ -694,6 +729,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 1,
           team_id: 22,
+          rank: 1,
           total_points_scored: 75,
           r1_points_scored: 7,
           r2_points_scored: 14,
@@ -708,6 +744,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 3,
           team_id: 22,
+          rank: 1,
           total_points_scored: 42,
           r1_points_scored: 2,
           r2_points_scored: 8,
@@ -722,6 +759,7 @@ exports.seed = function(knex, Promise) {
         {
           quiz_id: 4,
           team_id: 22,
+          rank: 1,
           total_points_scored: 75,
           r1_points_scored: 7,
           r2_points_scored: 14,

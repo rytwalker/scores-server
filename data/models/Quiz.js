@@ -30,6 +30,7 @@ module.exports = {
           's.round_jokered as j'
         )
         .from('quizzes as q')
+        .orderBy('total', 'desc')
         .join('scores as s', 'q.id', 's.quiz_id')
         .join('teams as t', 's.team_id', 't.id')
         .where({ 'q.id': id });
