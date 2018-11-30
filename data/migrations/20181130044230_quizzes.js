@@ -1,7 +1,7 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('quizzes', table => {
     // primary key
-    table.increments('id');
+    table.increments();
     // date field
     table.date('date').notNullable();
     // total points available
@@ -25,4 +25,6 @@ exports.up = function(knex, Promise) {
   });
 };
 
-exports.down = function(knex, Promise) {};
+exports.down = function(knex, Promise) {
+  return knex.schema.dropTable('quizzes');
+};

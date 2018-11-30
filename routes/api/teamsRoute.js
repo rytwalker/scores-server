@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     const teams = await db.get();
     res.status(200).json(teams);
   } catch (errors) {
-    res.status(500).json({ errors: 'There was an error get the teams.' });
+    res.status(500).json({ errors: 'There was an error getting the teams.' });
   }
 });
 

@@ -3,19 +3,16 @@ require('dotenv').config();
 
 module.exports = {
   development: {
-    client: 'sqlite3',
-    connection: {
-      filename: './data/pubquiz.sqlite3'
-    },
+    client: 'pg',
+    connection: 'postgres://localhost/suzies_scores',
     useNullAsDefault: true,
     migrations: {
-      directory: './data/migrations'
+      directory: __dirname + '/data/migrations'
     },
     seeds: {
-      directory: './data/seeds'
+      directory: __dirname + '/data/seeds'
     }
   },
-
   production: {
     client: 'pg',
     connection: process.env.DATABASE_URL + '?ssl=true',

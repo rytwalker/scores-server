@@ -1,7 +1,7 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('scores', table => {
     // primary key
-    table.increments('id');
+    table.increments();
     // foreign key for quizzes
     table
       .integer('quiz_id')
@@ -35,7 +35,13 @@ exports.up = function(knex, Promise) {
     table.integer('r8_points_scored').notNullable();
     // R8 points
     table.string('round_jokered', 255).notNullable();
+    // rank
+    table.integer('rank');
+    // if tie
+    table.boolean('wonTie');
   });
 };
 
-exports.down = function(knex, Promise) {};
+exports.down = function(knex, Promise) {
+  return knex.schema.dropTable('scores');
+};
