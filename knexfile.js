@@ -17,12 +17,9 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
+    client: 'pg',
     connection: process.env.DATABASE_URL + '?ssl=true',
-    pool: {
-      min: 2,
-      max: 10
-    },
+    useNullAsDefault: true,
     migrations: {
       directory: __dirname + '/data/migrations'
     },
