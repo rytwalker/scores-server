@@ -1,24 +1,35 @@
 const db = require('../dbConfig');
 
 module.exports = {
-  // GET TEAMS or SINGLE TEAM
+  // GET TEAMS or SINGLE TEAMç
   // get: async function() {
-  //   let query = await db('teams');
-  //   console.log(query);
-  //   return query;
+  //   try {
+  //     let query = await db('teams as t')
+  //       .select('t.id as teamId', 't.name as team_name')
+  //       .sum('s.total_points_scored as points')
+  //       .sum('q.total_points as total')
+  //       .avg('s.total_points_scored as average_score ')
+  //       .count('s.quiz_id as games_played')
+  //       .join('scores as s', 't.id', 's.team_id')
+  //       .join('quizzes as q', 's.quiz_id', 'q.id')
+  //       .groupBy('team_name', 'teamId')
+  //       .orderBy('average_score', 'desc');
+  //     return query;
+  //   } catch (error) {
+  //     console.dir(error);
+  //   }
   // }
   get: async function(id) {
     let quizzes;
-    let query = db
-      .select('t.id as id', 't.name as team_name')
+    let query = db('teams as t')
+      .select('t.id as teamId', 't.name as team_name')
       .sum('s.total_points_scored as points')
       .sum('q.total_points as total')
       .avg('s.total_points_scored as average_score ')
       .count('s.quiz_id as games_played')
-      .from('teams as t')
       .join('scores as s', 't.id', 's.team_id')
       .join('quizzes as q', 's.quiz_id', 'q.id')
-      .groupBy('team_name', 'id')
+      .groupBy('team_name', 'teamId')
       .orderBy('average_score', 'desc');
     if (id) {
       query.where({ 't.id': id });
