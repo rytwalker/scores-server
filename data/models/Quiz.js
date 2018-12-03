@@ -16,8 +16,8 @@ module.exports = {
     try {
       let row = await db
         .select(
-          't.id as team_id',
-          't.name as team_name',
+          't.id as teamId',
+          't.name as teamName',
           's.total_points_scored as total',
           's.r1_points_scored as r1',
           's.r2_points_scored as r2',
@@ -37,15 +37,16 @@ module.exports = {
 
       let query = await db
         .select('quizzes.id', 'quizzes.date')
-        .count('scores.id as total_teams')
+        .count('scores.id as totalTeams')
         .from('quizzes')
         .join('scores', 'quizzes.id', 'scores.quiz_id')
         .where({ 'quizzes.id': id })
+        .groupBy('quizzes.id')
         .first();
       query.results = row;
       return query;
     } catch (error) {
-      console.log({ error: 'There was an error accessing the DB.' });
+      console.dir(error);
     }
   }
 };
