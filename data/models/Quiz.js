@@ -11,13 +11,13 @@ module.exports = {
       console.log(error);
     }
   },
-  // GET SINGLE TEAM
+  // GET SINGLE QUIZ
   get: async function(id) {
     try {
       let row = await db
         .select(
-          't.id as teamId',
-          't.name as teamName',
+          't.id as team_id',
+          't.name as team_name',
           's.total_points_scored as total',
           's.r1_points_scored as r1',
           's.r2_points_scored as r2',
@@ -30,14 +30,14 @@ module.exports = {
           's.round_jokered as j'
         )
         .from('quizzes as q')
-        .orderBy('total', 'desc')
         .join('scores as s', 'q.id', 's.quiz_id')
         .join('teams as t', 's.team_id', 't.id')
+        .orderBy('total', 'desc')
         .where({ 'q.id': id });
 
       let query = await db
         .select('quizzes.id', 'quizzes.date')
-        .count('scores.id as totalTeams')
+        .count('scores.id as total_teams')
         .from('quizzes')
         .join('scores', 'quizzes.id', 'scores.quiz_id')
         .where({ 'quizzes.id': id })
